@@ -113,7 +113,7 @@ const Hero = () => {
 
                     {/* Main Heading */}
                     <motion.div variants={itemVariants} className="space-y-4">
-                        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
+                        <h1 className="text-4xl md:text-6xl font-bold leading-tight">
                             <span className="block text-white">Hi, I'm</span>
                             <span className="block gradient-text ">Fariya Sultana</span>
                         </h1>
@@ -211,7 +211,7 @@ const Hero = () => {
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                             onClick={() => document.getElementById('projects').scrollIntoView({ behavior: 'smooth' })}
-                            className="px-8 py-4 border-2 border-purple-500 text-purple-400 font-semibold rounded-lg hover:bg-purple-500 hover:text-white transition-all duration-300 flex items-center gap-2"
+                            className="px-6 py-3 border-2 border-purple-500 text-purple-400 font-semibold rounded-lg hover:bg-purple-500 hover:text-white transition-all duration-300 flex items-center gap-2"
                         >
                             <Code size={20} />
                             View My Work
@@ -226,7 +226,7 @@ const Hero = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 2 }}
-                className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+                className="absolute bottom-4 left-1/2 transform -translate-x-1/2"
             >
                 <motion.button
                     onClick={scrollToNext}

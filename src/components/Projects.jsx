@@ -1,7 +1,16 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Github, ExternalLink, Calendar, Users, Star, Code, Zap, Database } from 'lucide-react';
+import {
+    Github,
+    ExternalLink,
+    Calendar,
+    Users,
+    Star,
+    Code,
+    Zap,
+    Database
+} from 'lucide-react';
 
 const Projects = () => {
     const [ref, inView] = useInView({
@@ -14,111 +23,63 @@ const Projects = () => {
     const projects = [
         {
             id: 1,
-            title: "E-Commerce Platform",
-            description: "Full-stack e-commerce solution with payment integration, inventory management, and admin dashboard. Built with React and Node.js.",
-            category: "fullstack",
-            image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
-            technologies: ["React", "Node.js", "MongoDB", "Stripe", "Redux", "Express"],
-            features: ["Payment Integration", "Admin Dashboard", "Real-time Inventory", "User Authentication"],
-            github: "https://github.com/fariya-sultana/ecommerce-platform",
-            live: "https://ecommerce-demo.vercel.app",
+            title: 'GardenHub',
+            description:
+                'GardenHub is a modern landscaping and gardening web experience built to inspire nature lovers.This project helps showcase green services with a flair of creativity and responsiveness.',
+            category: 'fullstack',
+            image:
+                'https://i.postimg.cc/26twdsPt/Screenshot-2025-06-30-114501.png',
+            technologies: ['React', 'Node.js', 'MongoDB', 'tailwindcss', 'Redux', 'Express'],
+            features: ['Payment Integration', 'Admin Dashboard', 'Real-time Inventory', 'User Authentication'],
+            github: 'https://github.com/fariya-sultana/garden-hub',
+            live: 'https://garden-hub-app.web.app',
             stats: {
                 stars: 45,
                 forks: 12,
-                users: "1.2k"
+                users: '1.2k'
             },
-            status: "Live",
-            color: "from-blue-500 to-purple-600"
+            status: 'Live',
+            color: 'from-blue-500 to-purple-600'
         },
         {
             id: 2,
-            title: "Social Media Dashboard",
-            description: "Analytics dashboard for social media management with real-time data visualization and automated reporting features.",
-            category: "frontend",
-            image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
-            technologies: ["React", "TypeScript", "Chart.js", "Tailwind", "Firebase"],
-            features: ["Real-time Analytics", "Data Visualization", "Automated Reports", "Multi-platform Support"],
-            github: "https://github.com/fariya-sultana/social-dashboard",
-            live: "https://social-dashboard-demo.vercel.app",
+            title: 'ReadBooks',
+            description:
+                'ReadBooks is a full-stack library management web application designed for a school environment. It allows users to browse books by category, borrow and return books ',
+            category: 'frontend',
+            image:
+                'https://i.postimg.cc/NjxZ80bP/Screenshot-2025-06-30-114830.png',
+            technologies: ['React', 'JavaScript', 'axios', 'JWT', 'Firebase'],
+            features: ['Real-time Analytics', 'Data Visualization', 'Automated Reports', 'Multi-platform Support'],
+            github: 'https://github.com/fariya-sultana/read-books',
+            live: 'https://read-books-app.web.app/',
             stats: {
                 stars: 32,
                 forks: 8,
-                users: "850"
+                users: '850'
             },
-            status: "Live",
-            color: "from-green-500 to-blue-500"
+            status: 'Live',
+            color: 'from-green-500 to-blue-500'
         },
         {
             id: 3,
-            title: "Task Management API",
-            description: "RESTful API for task management with user authentication, role-based access control, and real-time notifications.",
-            category: "backend",
-            image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop",
-            technologies: ["Node.js", "Express", "PostgreSQL", "JWT", "Socket.io"],
-            features: ["REST API", "Real-time Updates", "Role-based Access", "Email Notifications"],
-            github: "https://github.com/fariya-sultana/task-api",
-            live: "https://task-api-docs.vercel.app",
+            title: 'Bill Payment Web App',
+            description:
+                'A simple and responsive web application that allows users to view and pay different types of bills. Built using React, Firebase Authentication, and Tailwind CSS.',
+            category: 'backend',
+            image:
+                'https://i.postimg.cc/ncF4jcjL/Screenshot-2025-06-30-115055.png',
+            technologies: ['Node.js', 'Express', 'JavaScript', 'TailwindCSS'],
+            features: ['REST API', 'Real-time Updates', 'Role-based Access', 'Email Notifications'],
+            github: 'https://github.com/fariya-sultana/bill-payment',
+            live: ' https://online-bill-payment-a9.web.app',
             stats: {
                 stars: 28,
                 forks: 15,
-                users: "650"
+                users: '650'
             },
-            status: "Live",
-            color: "from-orange-500 to-red-500"
-        },
-        {
-            id: 4,
-            title: "Weather Forecast App",
-            description: "Mobile-responsive weather application with location-based forecasts, interactive maps, and weather alerts.",
-            category: "frontend",
-            image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=600&h=400&fit=crop",
-            technologies: ["Vue.js", "Vuex", "OpenWeather API", "Leaflet", "PWA"],
-            features: ["Location-based Forecast", "Interactive Maps", "Weather Alerts", "Offline Support"],
-            github: "https://github.com/fariya-sultana/weather-app",
-            live: "https://weather-forecast-demo.vercel.app",
-            stats: {
-                stars: 67,
-                forks: 23,
-                users: "2.1k"
-            },
-            status: "Live",
-            color: "from-cyan-500 to-blue-600"
-        },
-        {
-            id: 5,
-            title: "Portfolio Website",
-            description: "Personal portfolio website with modern design, smooth animations, and responsive layouts. Built with React and Framer Motion.",
-            category: "frontend",
-            image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
-            technologies: ["React", "Framer Motion", "Tailwind CSS", "Vite"],
-            features: ["Smooth Animations", "Responsive Design", "Dark Theme", "Contact Form"],
-            github: "https://github.com/fariya-sultana/portfolio",
-            live: "https://fariya-portfolio.vercel.app",
-            stats: {
-                stars: 89,
-                forks: 34,
-                users: "3.5k"
-            },
-            status: "Live",
-            color: "from-purple-500 to-pink-600"
-        },
-        {
-            id: 6,
-            title: "Chat Application",
-            description: "Real-time chat application with group messaging, file sharing, and video calling features. Full-stack implementation.",
-            category: "fullstack",
-            image: "https://images.unsplash.com/photo-1577563908411-5077b6dc7624?w=600&h=400&fit=crop",
-            technologies: ["React", "Node.js", "Socket.io", "MongoDB", "WebRTC"],
-            features: ["Real-time Messaging", "File Sharing", "Video Calls", "Group Chat"],
-            github: "https://github.com/fariya-sultana/chat-app",
-            live: "https://chat-app-demo.vercel.app",
-            stats: {
-                stars: 156,
-                forks: 67,
-                users: "5.2k"
-            },
-            status: "Live",
-            color: "from-teal-500 to-cyan-600"
+            status: 'Live',
+            color: 'from-orange-500 to-red-500'
         }
     ];
 
@@ -129,9 +90,8 @@ const Projects = () => {
         { id: 'backend', label: 'Backend', icon: <Database className="w-4 h-4" /> }
     ];
 
-    const filteredProjects = filter === 'all'
-        ? projects
-        : projects.filter(project => project.category === filter);
+    const filteredProjects =
+        filter === 'all' ? projects : projects.filter((project) => project.category === filter);
 
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -151,7 +111,7 @@ const Projects = () => {
             y: 0,
             transition: {
                 duration: 0.6,
-                ease: "easeOut"
+                ease: 'easeOut'
             }
         }
     };
@@ -168,7 +128,7 @@ const Projects = () => {
                 <motion.div
                     variants={containerVariants}
                     initial="hidden"
-                    animate={inView ? "visible" : "hidden"}
+                    animate={inView ? 'visible' : 'hidden'}
                     className="space-y-12"
                 >
                     {/* Section Header */}
@@ -201,68 +161,37 @@ const Projects = () => {
                     </motion.div>
 
                     {/* Projects Grid */}
-                    <motion.div
-                        layout
-                        className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
-                    >
+                    <motion.div layout className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {filteredProjects.map((project) => (
                             <motion.div
                                 key={project.id}
                                 layout
                                 variants={itemVariants}
                                 whileHover={{ y: -10 }}
-                                className="group relative rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all duration-300 overflow-hidden"
+                                className="group relative rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all duration-300 overflow-hidden flex flex-col"
                             >
                                 {/* Project Image */}
                                 <div className="relative h-48 overflow-hidden">
                                     <img
                                         src={project.image}
                                         alt={project.title}
-                                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                                        className="w-full h-full object-cover"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-
-                                    {/* Status Badge */}
                                     <div className="absolute top-4 right-4">
                                         <span className="px-3 py-1 text-xs font-medium bg-green-500 text-white rounded-full">
-                                            {project.status}
+                                            {project.category}
                                         </span>
-                                    </div>
-
-                                    {/* Overlay Actions */}
-                                    <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                        <motion.a
-                                            href={project.github}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            whileHover={{ scale: 1.1 }}
-                                            whileTap={{ scale: 0.9 }}
-                                            className="p-3 bg-white/20 backdrop-blur-sm rounded-full text-white hover:bg-white/30 transition-colors duration-200"
-                                        >
-                                            <Github className="w-5 h-5" />
-                                        </motion.a>
-                                        <motion.a
-                                            href={project.live}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            whileHover={{ scale: 1.1 }}
-                                            whileTap={{ scale: 0.9 }}
-                                            className="p-3 bg-white/20 backdrop-blur-sm rounded-full text-white hover:bg-white/30 transition-colors duration-200"
-                                        >
-                                            <ExternalLink className="w-5 h-5" />
-                                        </motion.a>
                                     </div>
                                 </div>
 
                                 {/* Project Content */}
-                                <div className="p-6 space-y-4">
-                                    {/* Title and Description */}
+                                <div className="p-6 space-y-4 flex-grow flex flex-col">
                                     <div>
                                         <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
                                         <p className="text-gray-400 text-sm leading-relaxed">{project.description}</p>
                                     </div>
 
-                                    {/* Technologies */}
                                     <div className="flex flex-wrap gap-2">
                                         {project.technologies.slice(0, 3).map((tech, index) => (
                                             <span
@@ -279,7 +208,6 @@ const Projects = () => {
                                         )}
                                     </div>
 
-                                    {/* Features */}
                                     <div>
                                         <h4 className="text-sm font-semibold text-white mb-2">Key Features</h4>
                                         <ul className="text-xs text-gray-400 space-y-1">
@@ -292,7 +220,6 @@ const Projects = () => {
                                         </ul>
                                     </div>
 
-                                    {/* Stats */}
                                     <div className="flex items-center justify-between pt-4 border-t border-white/10">
                                         <div className="flex items-center gap-4 text-xs text-gray-400">
                                             <div className="flex items-center gap-1">
@@ -305,6 +232,28 @@ const Projects = () => {
                                             </div>
                                         </div>
                                         <div className={`w-3 h-3 rounded-full bg-gradient-to-r ${project.color}`} />
+                                    </div>
+
+                                    {/* GitHub and Live Demo Buttons */}
+                                    <div className="flex items-center justify-center gap-4 mt-4">
+                                        <a
+                                            href={project.github}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="flex items-center gap-2 px-4 py-2 text-sm bg-white/10 text-white rounded-md hover:bg-white/20 transition"
+                                        >
+                                            <Github className="w-4 h-4" />
+                                            GitHub
+                                        </a>
+                                        <a
+                                            href={project.live}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="flex items-center gap-2 px-4 py-2 text-sm bg-white/10 text-white rounded-md hover:bg-white/20 transition"
+                                        >
+                                            <ExternalLink className="w-4 h-4" />
+                                            Live Demo
+                                        </a>
                                     </div>
                                 </div>
                             </motion.div>

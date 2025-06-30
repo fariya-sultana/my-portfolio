@@ -8,12 +8,11 @@ import {
     Cloud,
     Palette,
     Search,
-    Shield,
-    Zap,
     CheckCircle,
     ArrowRight,
     Globe,
-    Cpu
+    Cpu,
+    Zap
 } from 'lucide-react';
 
 const Services = () => {
@@ -27,35 +26,31 @@ const Services = () => {
             id: 1,
             icon: <Code className="w-8 h-8" />,
             title: "Full Stack Development",
-            description: "End-to-end web application development using modern technologies like React, Node.js, and cloud services.",
+            description: "End-to-end web application development using modern technologies.",
             features: [
                 "Custom Web Applications",
                 "API Development & Integration",
                 "Database Design & Optimization",
                 "Third-party Service Integration"
             ],
-            technologies: ["React", "Node.js", "Python", "PostgreSQL", "AWS"],
+            technologies: ["React", "Node.js", "PostgreSQL", "AWS"],
             color: "from-blue-500 to-purple-600",
             bgColor: "bg-blue-500/10",
-            price: "Starting at $2,500",
-            deliveryTime: "2-4 weeks"
         },
         {
             id: 2,
             icon: <Smartphone className="w-8 h-8" />,
-            title: "Mobile App Development",
-            description: "Cross-platform mobile applications with native performance and modern UI/UX design principles.",
+            title: "Responsive Design",
+            description: "Mobile-first, responsive websites that work flawlessly across all devices and make useable.",
             features: [
-                "React Native Development",
-                "Cross-platform Compatibility",
-                "Push Notifications",
-                "Offline Functionality"
+                "Mobile Optimization",
+                "Cross-Browser Compatibility",
+                "Touch-Friendly Interfaces",
+                "Adaptive Layouts"
             ],
-            technologies: ["React Native", "Firebase", "Redux", "TypeScript"],
+            technologies: ["React", "tailwindcss", "TypeScript"],
             color: "from-green-500 to-teal-600",
             bgColor: "bg-green-500/10",
-            price: "Starting at $3,000",
-            deliveryTime: "3-6 weeks"
         },
         {
             id: 3,
@@ -68,28 +63,24 @@ const Services = () => {
                 "Server Optimization",
                 "Security Implementation"
             ],
-            technologies: ["Node.js", "Express", "MongoDB", "PostgreSQL", "Redis"],
+            technologies: ["Node.js", "Express", "MongoDB"],
             color: "from-orange-500 to-red-600",
             bgColor: "bg-orange-500/10",
-            price: "Starting at $1,800",
-            deliveryTime: "1-3 weeks"
         },
         {
             id: 4,
             icon: <Cloud className="w-8 h-8" />,
             title: "Cloud Solutions",
-            description: "Cloud infrastructure setup, deployment automation, and scalable hosting solutions for your applications.",
+            description: "Cloud infrastructure setup, deployment automation, and scalable hosting solutions.",
             features: [
                 "AWS/Azure Deployment",
                 "CI/CD Pipeline Setup",
                 "Auto-scaling Configuration",
                 "Monitoring & Analytics"
             ],
-            technologies: ["AWS", "Docker", "Kubernetes", "Terraform", "GitHub Actions"],
+            technologies: ["Firebase", "Docker", "GitHub Actions"],
             color: "from-cyan-500 to-blue-600",
             bgColor: "bg-cyan-500/10",
-            price: "Starting at $1,200",
-            deliveryTime: "1-2 weeks"
         },
         {
             id: 5,
@@ -102,11 +93,9 @@ const Services = () => {
                 "Prototyping & Wireframing",
                 "Design System Creation"
             ],
-            technologies: ["Figma", "Adobe XD", "Tailwind CSS", "Framer Motion"],
+            technologies: ["Figma", "Tailwind CSS", "Framer Motion"],
             color: "from-purple-500 to-pink-600",
             bgColor: "bg-purple-500/10",
-            price: "Starting at $800",
-            deliveryTime: "1-2 weeks"
         },
         {
             id: 6,
@@ -119,11 +108,9 @@ const Services = () => {
                 "Content Strategy",
                 "Analytics Setup"
             ],
-            technologies: ["Google Analytics", "Search Console", "Lighthouse", "GTM"],
+            technologies: ["Google Analytics", "Search Console"],
             color: "from-teal-500 to-green-600",
             bgColor: "bg-teal-500/10",
-            price: "Starting at $600",
-            deliveryTime: "1 week"
         }
     ];
 
@@ -179,7 +166,6 @@ const Services = () => {
 
     return (
         <section id="services" className="section-padding relative overflow-hidden">
-            {/* Background Elements */}
             <div className="absolute inset-0 opacity-5">
                 <div className="absolute top-20 left-20 w-80 h-80 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full blur-3xl animate-pulse-slow" />
                 <div className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-pink-500 to-orange-500 rounded-full blur-3xl animate-pulse-slow delay-1000" />
@@ -192,7 +178,6 @@ const Services = () => {
                     animate={inView ? "visible" : "hidden"}
                     className="space-y-16"
                 >
-                    {/* Section Header */}
                     <motion.div variants={itemVariants} className="text-center space-y-4">
                         <h2 className="text-4xl md:text-5xl font-bold">
                             <span className="gradient-text">Services I Offer</span>
@@ -202,7 +187,6 @@ const Services = () => {
                         </p>
                     </motion.div>
 
-                    {/* Services Grid */}
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {services.map((service) => (
                             <motion.div
@@ -211,22 +195,18 @@ const Services = () => {
                                 whileHover={{ y: -10, scale: 1.02 }}
                                 className="group relative p-8 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all duration-300 overflow-hidden"
                             >
-                                {/* Background Gradient */}
                                 <div className={`absolute inset-0 bg-gradient-to-r ${service.color} opacity-0 group-hover:opacity-5 transition-opacity duration-300`} />
 
-                                {/* Service Icon */}
                                 <div className={`inline-flex p-4 rounded-xl ${service.bgColor} text-white mb-6 group-hover:scale-110 transition-transform duration-300`}>
                                     <div className={`bg-gradient-to-r ${service.color} p-2 rounded-lg`}>
                                         {service.icon}
                                     </div>
                                 </div>
 
-                                {/* Service Content */}
                                 <div className="space-y-4">
                                     <h3 className="text-xl font-bold text-white">{service.title}</h3>
                                     <p className="text-gray-400 leading-relaxed">{service.description}</p>
 
-                                    {/* Features */}
                                     <ul className="space-y-2">
                                         {service.features.map((feature, index) => (
                                             <li key={index} className="flex items-center gap-2 text-sm text-gray-300">
@@ -236,7 +216,6 @@ const Services = () => {
                                         ))}
                                     </ul>
 
-                                    {/* Technologies */}
                                     <div>
                                         <h4 className="text-sm font-semibold text-white mb-2">Technologies</h4>
                                         <div className="flex flex-wrap gap-2">
@@ -250,34 +229,11 @@ const Services = () => {
                                             ))}
                                         </div>
                                     </div>
-
-                                    {/* Pricing and Timeline */}
-                                    <div className="pt-4 border-t border-white/10 space-y-2">
-                                        <div className="flex items-center justify-between">
-                                            <span className="text-sm text-gray-400">Starting Price</span>
-                                            <span className="text-sm font-semibold text-white">{service.price}</span>
-                                        </div>
-                                        <div className="flex items-center justify-between">
-                                            <span className="text-sm text-gray-400">Delivery Time</span>
-                                            <span className="text-sm font-semibold text-white">{service.deliveryTime}</span>
-                                        </div>
-                                    </div>
-
-                                    {/* CTA Button */}
-                                    <motion.button
-                                        whileHover={{ scale: 1.05 }}
-                                        whileTap={{ scale: 0.95 }}
-                                        className={`w-full mt-6 px-6 py-3 bg-gradient-to-r ${service.color} text-white rounded-lg font-medium hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2 group`}
-                                    >
-                                        <span>Get Started</span>
-                                        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-                                    </motion.button>
                                 </div>
                             </motion.div>
                         ))}
                     </div>
 
-                    {/* Process Section */}
                     <motion.div variants={itemVariants} className="space-y-12">
                         <div className="text-center space-y-4">
                             <h3 className="text-3xl md:text-4xl font-bold">
@@ -296,23 +252,16 @@ const Services = () => {
                                     whileHover={{ y: -5 }}
                                     className="text-center space-y-4 group relative"
                                 >
-                                    {/* Step Number */}
                                     <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold text-lg mb-4 group-hover:scale-110 transition-transform duration-300">
                                         {step.step}
                                     </div>
-
-                                    {/* Step Icon */}
                                     <div className="inline-flex p-3 rounded-xl bg-white/10 text-purple-400 group-hover:bg-white/20 transition-colors duration-300">
                                         {step.icon}
                                     </div>
-
-                                    {/* Step Content */}
                                     <div>
                                         <h4 className="text-lg font-semibold text-white mb-2">{step.title}</h4>
                                         <p className="text-gray-400 text-sm leading-relaxed">{step.description}</p>
                                     </div>
-
-                                    {/* Connection Line */}
                                     {index < processSteps.length - 1 && (
                                         <div className="hidden lg:block absolute top-8 left-full w-8 h-px bg-gradient-to-r from-purple-500 to-transparent" />
                                     )}
@@ -321,7 +270,6 @@ const Services = () => {
                         </div>
                     </motion.div>
 
-                    {/* Call to Action */}
                     <motion.div variants={itemVariants} className="text-center space-y-8">
                         <div className="space-y-4">
                             <h3 className="text-2xl md:text-3xl font-bold text-white">

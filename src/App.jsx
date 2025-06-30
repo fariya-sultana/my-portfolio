@@ -9,13 +9,13 @@ import Projects from './components/Projects';
 import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-// import ScrollToTop from './components/ScrollToTop';
-// import ParticleBackground from './components/ParticleBackground';
+import ScrollToTop from './components/ScrollToTop';
+import ParticleBackground from './components/ParticleBackground';
 
 function App() {
   return (
     <div className="relative min-h-screen bg-slate-900 text-white overflow-x-hidden">
-      {/* <ParticleBackground /> */}
+      <ParticleBackground />
       <Navbar />
       <main>
         <Hero />
@@ -28,7 +28,7 @@ function App() {
         <Contact />
       </main>
       <Footer />
-      {/* <ScrollToTop /> */}
+      <ScrollToTop />
     </div>
   );
 }
